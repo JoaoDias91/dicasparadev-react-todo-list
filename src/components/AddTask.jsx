@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './AddTask.css';
-import Button from './Button';
+import Fodase from './Button';
 
 const AddTask = ({handleTaskAddition}) => {
     const [inputData, setInputData] = useState('')
@@ -18,7 +18,7 @@ const AddTask = ({handleTaskAddition}) => {
         <div className="add-task-container">
             <input onChange={handleInputChange} value={inputData} className="add-task-input" type="text" />
             <div className="add-task-button-container">
-                <Button onClick={handleAddTaskClick}>Adicionar</Button>
+                <Fodase onClick={handleAddTaskClick}>Adicionar</Fodase>
             </div>
         </div>
 
