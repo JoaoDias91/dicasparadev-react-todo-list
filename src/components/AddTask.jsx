@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import './AddTask.css';
-import Fodase from './Button';
+import Button from './Button';
 
 const AddTask = ({handleTaskAddition}) => {
     const [inputData, setInputData] = useState('')
 
-    const handleInputChange = (e) => {
+    const handleInputChange = (e) => {     
+        //console.log(e.target.value);
         setInputData(e.target.value);
     };
 
     const handleAddTaskClick = () => {
-        handleTaskAddition(inputData)
+        if(inputData){
+            handleTaskAddition(inputData)
+        }else{
+            console.log("Vazio!");
+        }
         setInputData("");
     }
 
@@ -18,7 +23,7 @@ const AddTask = ({handleTaskAddition}) => {
         <div className="add-task-container">
             <input onChange={handleInputChange} value={inputData} className="add-task-input" type="text" />
             <div className="add-task-button-container">
-                <Fodase onClick={handleAddTaskClick}>Adicionar</Fodase>
+                <Button onClick={handleAddTaskClick}>Adicionar</Button>
             </div>
         </div>
 
