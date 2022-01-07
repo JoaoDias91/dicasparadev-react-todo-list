@@ -15,16 +15,7 @@ import AddTask from "./components/AddTask";
 const App = () => {
   // let message = 'Hello World!'
   const [tasks, setTasks] = useState([
-    {
-      id:'1',
-      title: 'Estudar Programação',
-      completed: false,
-    },
-    {
-      id:'2',
-      title: 'Ler livros',
-      completed: true,
-    },
+    
   ]);
 
   useEffect(() => {
